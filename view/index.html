@@ -110,7 +110,7 @@
 
             async function getMsg() {
                 await fetch("/api/chats/getChats")
-                .then((response)=>{response.json()}) 
+                .then((response)=>response.json()) 
                 .then((chatList)=>{
                     // console.log(data)
                     for (let i = 0; i < chatList.length; i++) {
