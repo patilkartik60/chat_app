@@ -110,11 +110,11 @@
 
             async function getMsg() {
                 await fetch("/api/chats/getChats")
-                .then((data)=>{data.json}) 
-                .then((data)=>{
+                .then((response)=>{response.json}) 
+                .then((chatList)=>{
                     // console.log(data)
-                    for (let i = 0; i < data.length; i++) {
-                        let element = data[i]
+                    for (let i = 0; i < chatList.length; i++) {
+                        let element = chatList[i]
                         if(element.username==window.localStorage.getItem("user")){
                             let txt = `<div class=" flex justify-self-end  flex w-2/3 p-2 items-start flex-row-reverse gap-2.5">
                                     <img class="w-8 h-8 rounded-full" src="/public/images/pfp.JPG" alt="Jese image">
