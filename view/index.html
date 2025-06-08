@@ -86,6 +86,7 @@
                let userNameFromLS = localStorage.getItem("user");
                if(userNameFromLS){
                 document.getElementById("username").innerText = userNameFromLS;
+                window.location.reload(true)
                }else{
                 let userNameInput = window.prompt("Please Enter Your Username:")
                 localStorage.setItem("user", userNameInput);
